@@ -11,13 +11,6 @@ $AdresseMAC = (Get-NetAdapter).MacAddress
 $Connectivity = Test-Connection google.fr, vokto.com, 8.8.8.8 -Count 1 | foreach {$_.Status}
 $TailleTexte = New-Object System.Drawing.Font("Arial", 10, [System.Drawing.FontStyle]::Bold)
 
-
-
-
-$Fenetre = New-Object System.Windows.Forms.Form
-Add-Type -AssemblyName System.Windows.Forms
-Add-Type -AssemblyName System.Drawing
-
 $Fenetre = New-Object System.Windows.Forms.Form
 
 $Fenetre.Width = "500"
