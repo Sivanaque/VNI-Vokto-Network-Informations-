@@ -1,7 +1,10 @@
 # Network Informations (NI)
 
-Au vu de mon alternance, j'ai créé ce script PowerShell qui permet d'afficher les informations réseau de la machine sous forme d'une interface graphique. Il fournit des détails tels que l'adresse IP, le masque de sous-réseau, l'adresse MAC, le DNS et les paramètres DHCP,
-mais de manière beaucoup plus inituitive et facile que les commandes que l'on peut ne pas connaître lorsque nous sommes pas initié.
+Au vu de mon alternance, j'ai créé ce script PowerShell qui permet d'afficher les informations réseau de la machine sous forme d'une interface graphique. Il fournit des détails réseau comme hardware mais de manière beaucoup plus inituitive et facile que les commandes que l'on peut ne pas connaître lorsque nous sommes pas initié.
+
+## Prérequis
+
+⚠ Assurez-vous d'avoir Powershell 5.1 ou 7 d'installé sur votre ordinateur
 
 ## Fonctionnalités
 
@@ -12,8 +15,6 @@ mais de manière beaucoup plus inituitive et facile que les commandes que l'on p
   - Passerelle par défaut
   - Serveurs DNS
   - État et serveur DHCP
-
-- Affichage des informations dans une interface graphique utilisant `System.Windows.Forms`
 
 - Sauvegarde de la configuration réseau dans un fichier texte
 
@@ -26,18 +27,13 @@ mais de manière beaucoup plus inituitive et facile que les commandes que l'on p
 
 ## Utilisation
 
-1. Exécute le script PowerShell.
-2. Une fenêtre s'ouvre affichant les informations réseau de la machine.
-3. Clique sur **"Enregistrer ma configuration"** pour sauvegarder les paramètres dans un fichier `.txt`.
-4. Clique sur **"Voir La Configuration Hardware"** pour afficher les spécifications matérielles.
+Une converstion en .exe est disponible afin de tester le script sans pour autant devoir gérer les politiques d'autorisations de PowerShell.
+
+*Dans le cas où vous souhaitez éxécuter le script avec PowerShell, autoriser son éxécution de script au sein de votre infrastrcutre AD ou votre machine, puis cliquer sur NI.ps1*
+
+Les fonctionnalités seront ensuite sous vos yeux. 😀
 
 ## Technologies utilisées
 
-- PowerShell
-- `System.Windows.Forms` pour l'interface graphique
-- `Get-CimInstance` pour récupérer les informations système
+Les informations de votre machine sont récupéres depuis les instances CIM proposés par Windows.
 
-## Prérequis
-
-- Windows
-- PowerShell installé
